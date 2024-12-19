@@ -1,0 +1,21 @@
+Instead of relying solely on `:nth-child`, use JavaScript to apply styles dynamically.  Listen for DOM events (like `DOMNodeInserted`) or use a more robust approach like a CSS framework that handles dynamic styling. Below is an example using JavaScript:
+
+```javascript
+const container = document.getElementById('myContainer');
+
+container.addEventListener('DOMNodeInserted', (event) => {
+  const newElement = event.target;
+  // Add styling to the new element here
+  newElement.style.backgroundColor = 'lightblue';
+  // or apply class
+  newElement.classList.add('dynamic-style');
+});
+```
+
+And then, add the CSS class `.dynamic-style`:
+```css
+.dynamic-style{
+  background-color: lightblue;
+}
+```
+This solution ensures that styles are applied to new elements added to the DOM.
