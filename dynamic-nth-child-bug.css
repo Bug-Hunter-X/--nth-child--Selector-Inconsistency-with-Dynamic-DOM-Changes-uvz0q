@@ -1,0 +1,1 @@
+The CSS rule `:nth-child(n)` selector does not work as expected when dealing with elements that have been dynamically added or removed from the DOM.  This is because the `:nth-child` selector operates on the static structure of the DOM at the time the stylesheet is applied, not the live, changing structure. If you add or remove elements afterwards, it won't adjust.
